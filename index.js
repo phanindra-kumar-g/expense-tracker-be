@@ -2,11 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const expenses = require("./expenses");
 const reminders = require("./reminders");
+const groceries = require("./grocerries");
 
 const app = express();
 app.use(cors());
 app.use("/expenses", expenses);
-app.use("/reminders", reminders)
+app.use("/reminders", reminders);
+app.use("/groceries", groceries);
 
 const port = 3000;
 
